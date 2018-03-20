@@ -3,7 +3,7 @@ from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
 
-#Variables that contains the user credentials to access Twitter API 
+#Variables that contain the user credentials to access Twitter API 
 access_token = "969164812310794242-uV56fg4mJfUAQlQkUx2vhOPDbhGzZ6V"
 access_token_secret = "4QJxalTQOg66ZLtKaNGpXFOcXEocAWi7gFh1KlYxqRDpz" 
 consumer_key = "bU3fiwthsZU1FtudNsAN6uiGn"
@@ -30,5 +30,5 @@ if __name__ == '__main__':
     stream = Stream(auth, l)
    
 
-    #This line filter Twitter Streams to capture data by the keywords: 'python', 'javascript', 'ruby'
+    #This line filter Twitter Streams to capture data by the keyword'Novartis'
     stream.filter(track=['Novartis'], languages=["en"])
