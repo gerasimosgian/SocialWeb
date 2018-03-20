@@ -23,10 +23,6 @@ with open(output_file, "w") as output_novartis:
         tweet = tweets_novartis["full_text"]
 
         #TextBlob to calculate sentiment
-        #tweet = Textblob(tweet)
-        #tweet = tweet.replace("\n" , " ")
-        #tweet = tweet.replace("\r" , " ")
-
         sentiment = [[TextBlob(tweet).sentiment.polarity]]
         writer.writerows(sentiment)
 
