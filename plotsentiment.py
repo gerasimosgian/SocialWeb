@@ -7,11 +7,12 @@ import datetime
 import csv
 import matplotlib.dates as mdates
 
+#Read the .csv file
 filename='results.csv'
 value=[]
 date=[]
 
-
+#Append the data in the .csv file
 with open(filename, 'r') as csvfile:
 	csvreader = csv.reader(csvfile)
 	for row in csvreader:
@@ -28,7 +29,7 @@ df = pd.read_csv('results.csv', names = headers)
 df['Date']=pd.to_datetime(df['Date'], format='%b %d') #Convert the strings in the second column to datetime 
 date=df.set_index('Date').groupby(pd.TimeGrouper('d')).mean() #Calculate the mean of polarity for each day
 
-
+#Plotting the results
 plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%m-%d'))
 plt.plot(date)
 plt.gcf().autofmt_xdate()
