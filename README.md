@@ -10,7 +10,7 @@ In this project we apply sentiment analysis to extracted tweets containing hasht
 
 # Extracting Tweets
 
-For tweet Extraction we used two methods : twarc(https://github.com/DocNow/twarc) and the script "tweetextr.py".
+For tweet Extraction we used two methods : twarc(https://github.com/DocNow/twarc) and the script "TweetsExtraction.py".
 
 # Performing Sentiment Analysis
 
