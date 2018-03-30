@@ -1,4 +1,3 @@
-from matplotlib import style
 from matplotlib import pylab as plt
 import numpy as np
 import pandas as pd
@@ -11,6 +10,7 @@ date1=[]
 op=[]
 cl=[]
 
+#Append the .csv file
 with open('novstocks.csv', 'r') as prices:
 	csvreader = csv.reader(prices)
 	for row in csvreader:
@@ -25,7 +25,8 @@ df1['Dates']=pd.to_datetime(df1['Dates'], format='%b-%d') #Convert the strings i
 			
 op=np.array(op)
 cl=np.array(cl)			
-		
+
+#Plotting
 plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%m-%d'))
 plt.plot(df1['Dates'], cl)
 plt.plot(df1['Dates'], op)
