@@ -1,4 +1,3 @@
-from matplotlib import style
 from matplotlib import pylab as plt
 import numpy as np
 import pandas as pd
